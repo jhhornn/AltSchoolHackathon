@@ -1,0 +1,1 @@
+console.log(validateNetwork('8076771953'))
