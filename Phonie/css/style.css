@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 body {
@@ -36,6 +36,7 @@ form > *{
 
 .logo{
     padding: 1em;
+    width: 200px;
 }
 
 /* form{
@@ -112,15 +113,15 @@ label {
 
 .glo,
 .etisalat{
-    margin: 0 .2em;
+    margin: 0 .1em;
 }
 
 .mtn{
-    margin-right: .2em;
+    margin-right: .1em;
 }
 
 .airtel{
-    margin-left: .2em;
+    margin-left: .1em;
 }
 
 .flex {
@@ -133,18 +134,19 @@ label {
     /* padding: 1.2em; */
     /* background: #618DF8; */
     border-radius: 2em;
-    width: 100%;
+    width: 60%;
     height: 500px;
     min-width: 400px;
     
 }
 
 .container {
-    width: 60%;
-    min-height: 65vh;
+    width: 100%;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    flex-direction: column;
+    /* margin: 0 auto; */
     
    
 }
@@ -173,6 +175,8 @@ footer > p {
 @media (min-width: 600px) {
     .flex-container{
         flex-direction: row;
+        max-width: 900px;
+        /* width: 80%; */
     }
     .network{
         margin-top: 0;
@@ -183,9 +187,9 @@ footer > p {
             border-radius: 0 2em 2em 0;
     }
     .container {
-        width: 80%;
-        max-width: 900px;
-        min-height: 75vh;
+        width: 100%;
+        min-height: 100vh;
+        flex-direction: row;
     }
     .phonebooth{
         border-radius: 2em 0 0 2em;
