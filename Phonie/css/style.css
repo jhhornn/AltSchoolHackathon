@@ -2,10 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 15px;
 }
 
+
 body {
+    font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     color: black;
@@ -16,13 +18,15 @@ body {
     justify-content: space-between;
 }
 
+
 img {
     max-width: 100%;
     display: block;
 }
 
+
 input{
-    width: 80%;
+    width: 100%;
     padding: .5em;
     font-family: inherit;
     border-radius: .5em;
@@ -30,78 +34,60 @@ input{
 }
 
 
-form > *{
-    /* display: block; */
-    margin: 0 auto;
-    /* text-align: left; */
-}
-
 .logo{
     padding: 1em;
-    width: 200px;
+    width: 180px;
 }
 
-/* form{
-    
-} */
-
-/* main {
-    width: 40%;
-    margin: 0 auto;
-} */
 
 .second{
-    /* width: 100%; */
     flex-basis: 100%;
     background: #618DF8;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
     border-radius: 0 0 2em 2em;
-    padding: 1em;
+    padding:1em;
+    align-items: center;
 }
 
 
 .phonebooth{
-    /* object-fit: cover;
-    object-position: center; */
-    flex-basis: 15.417em;
-    /* width: 100%; */
-    width: 100%;
+    flex-basis: 10.417em;
     min-width: 0;
     min-height: 0;
     background-image: url(../img/phone.jpg);
     border-radius: 2em 2em 0 0;
-    background-size: 400px 300px;
+    background-size: 400px 250px;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 5em;
+
 }
 
+
 .network {
-    margin-top: 2em;
+    margin: 1em 0;
     justify-content: space-around;
     width: 100%;
 }
 
-form {
-    margin: 2em auto 1.2em;
-    flex-direction: column;
 
-    /* justify-content: center; */
-    align-items: flex-start;
+.form-div {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* width: 50px; */
 }
 
-/* form>* {
-    /* display: block; */
-    /* margin: 0 auto; */
-    /* text-align: left;
+
+form{
+    margin:1em 0 0;
+}
+
+
+/* label,input{
+    font-size: .9rem;
 } */
 
-
-label {
-    text-align: left;
-}
 
 .network-img{
     width: 2em;
@@ -113,34 +99,37 @@ label {
     
 }
 
+
 .glo,
 .etisalat{
     margin: 0 .1em;
 }
 
+
 .mtn{
     margin-right: .1em;
 }
+
 
 .airtel{
     margin-left: .1em;
 }
 
+
 .flex {
     display: flex;
 }
 
+
 .flex-container {
     flex-direction: column;
     border: 1px solid magenta;
-    /* padding: 1.2em; */
-    /* background: #618DF8; */
     border-radius: 2em;
     width: 60%;
-    height: 400px;
-    min-width: 300px;
+    min-width: 200px;
     
 }
+
 
 .container {
     width: 100%;
@@ -148,15 +137,14 @@ label {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* margin: 0 auto; */
     
    
 }
 
-footer > p {
-    position: absolute;
-    bottom: 2em;
-    right: 2em;
+
+footer {
+    margin-bottom: 2em;
+    justify-content: flex-end;
 }
 
 .glow {
@@ -165,20 +153,25 @@ footer > p {
     transition: transform 250ms;
 }
 
- .warning {
-     margin-top: .8em;
-     display: inline-block;
-     /* position: absolute; */
-     color: red;
 
- }
+.warning {
+   font-size: 0.7rem;
+    color: red;
+    padding: 1em;
+    height: 1em;
+    margin: 0 0 2em;
+}
  
 
 @media (min-width: 600px) {
     .flex-container{
         flex-direction: row;
         max-width: 900px;
+        height: 400px;
         /* width: 80%; */
+    }
+    .logo {
+        width: 200px;
     }
     .network{
         margin-top: 0;
@@ -187,6 +180,7 @@ footer > p {
         padding: 1em;
         margin: auto auto;
         border-radius: 0 2em 2em 0;
+        height: 100%;
     }
     .container {
         /* width: 70%; */
@@ -196,6 +190,7 @@ footer > p {
     .phonebooth{
         border-radius: 2em 0 0 2em;
         background-size: 500px 500px;
+        flex-basis: 20.417em;
     }
     .network-img{
         height: 3.5em;
@@ -218,9 +213,6 @@ footer > p {
     }
 
     .warning {
-        margin-top: .8em;
-        display: inline-block;
-        /* position: absolute; */
-        
+        margin: 0;
     }
 }
