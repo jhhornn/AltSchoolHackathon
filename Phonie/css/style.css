@@ -183,9 +183,9 @@ footer > p {
             border-radius: 0 2em 2em 0;
     }
     .container {
-        width: 80%;
-        max-width: 900px;
-        min-height: 75vh;
+        width: 70%;
+        max-width: 800px;
+        min-height: 50vh;
     }
     .phonebooth{
         border-radius: 2em 0 0 2em;
