@@ -16,6 +16,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100vh;
 }
 
 
@@ -41,8 +42,9 @@ input{
 
 
 .second{
-    flex-basis: 100%;
-    background: #618DF8;
+    flex-basis: 60%;
+    /* background: #618DF8; */
+    background: rgba(62, 160, 254, .8);
     flex-direction: column;
     justify-content: center;
     border-radius: 0 0 2em 2em;
@@ -58,7 +60,7 @@ input{
     background-image: url(../img/phone.jpg);
     border-radius: 2em 2em 0 0;
     background-size: 400px 250px;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
 
 }
@@ -75,18 +77,12 @@ input{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* width: 50px; */
 }
 
 
 form{
     margin:1em 0 0;
 }
-
-
-/* label,input{
-    font-size: .9rem;
-} */
 
 
 .network-img{
@@ -123,17 +119,20 @@ form{
 
 .flex-container {
     flex-direction: column;
-    border: 1px solid magenta;
+    /* border: 1px solid magenta; */
     border-radius: 2em;
     width: 60%;
     min-width: 200px;
+    box-shadow: 0 20px 30px 0px rgba(0,0,0,.2),
+    0 4px 4px 0px rgba(0, 0, 0, .25),
+    0 2px 3px 0px rgba(0, 0, 0, .6);
     
 }
 
 
 .container {
     width: 100%;
-    min-height: 90vh;
+    min-height: 80vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -143,8 +142,10 @@ form{
 
 
 footer {
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
     justify-content: flex-end;
+    padding: 2em;
+    font-weight: 700;
 }
 
 .glow {
@@ -159,7 +160,8 @@ footer {
     color: red;
     padding: 1em;
     height: 1em;
-    margin: 0 0 2em;
+    margin: 0 0 3em;
+    font-weight: 500;
 }
  
 
@@ -178,9 +180,10 @@ footer {
     }
     .second{
         padding: 1em;
-        margin: auto auto;
+        /* margin: auto auto; */
         border-radius: 0 2em 2em 0;
         height: 100%;
+        flex-basis: 80%;
     }
     .container {
         /* width: 70%; */
@@ -190,7 +193,8 @@ footer {
     .phonebooth{
         border-radius: 2em 0 0 2em;
         background-size: 500px 500px;
-        flex-basis: 20.417em;
+        flex-basis: 25.417em;
+    
     }
     .network-img{
         height: 3.5em;
@@ -214,5 +218,6 @@ footer {
 
     .warning {
         margin: 0;
+        font-size: 0.8rem;
     }
 }
