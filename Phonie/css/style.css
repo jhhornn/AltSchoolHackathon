@@ -11,7 +11,9 @@ body {
     color: black;
     line-height: 1.6;
     background-image: url(../img/background.jpg);
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 img {
@@ -135,14 +137,14 @@ label {
     /* background: #618DF8; */
     border-radius: 2em;
     width: 60%;
-    height: 500px;
-    min-width: 400px;
+    height: 400px;
+    min-width: 300px;
     
 }
 
 .container {
     width: 100%;
-    min-height: 100vh;
+    min-height: 90vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -189,7 +191,7 @@ footer > p {
     .container {
         /* width: 70%; */
         /* max-width: 800px; */
-        min-height: 100vh;
+        min-height: 80vh;
     }
     .phonebooth{
         border-radius: 2em 0 0 2em;
