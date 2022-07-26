@@ -69,9 +69,10 @@ form > *{
     min-height: 0;
     background-image: url(../img/phone.jpg);
     border-radius: 2em 2em 0 0;
-    background-size: 200px 200px;
+    background-size: 400px 300px;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 5em;
 }
 
 .network {
@@ -81,18 +82,19 @@ form > *{
 }
 
 form {
-    margin: 0 auto;
+    margin: 2em auto 1.2em;
     flex-direction: column;
 
     /* justify-content: center; */
     align-items: flex-start;
 }
 
-form>* {
+/* form>* {
     /* display: block; */
-    margin: 0 auto;
-    /* text-align: left; */
-}
+    /* margin: 0 auto; */
+    /* text-align: left;
+} */
+
 
 label {
     text-align: left;
@@ -139,7 +141,7 @@ label {
 
 .container {
     width: 60%;
-    min-height: 80vh;
+    min-height: 65vh;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
@@ -155,9 +157,18 @@ footer > p {
 
 .glow {
     box-shadow: 0px 0px 0.1563em 0.2604em #f2e1f2;
-    transform: scale(1.3);
+    transform: scale(1.4);
     transition: transform 250ms;
 }
+
+ .warning {
+     margin-top: .8em;
+     display: inline-block;
+     /* position: absolute; */
+     color: red;
+
+ }
+ 
 
 @media (min-width: 600px) {
     .flex-container{
@@ -174,6 +185,7 @@ footer > p {
     .container {
         width: 80%;
         max-width: 900px;
+        min-height: 75vh;
     }
     .phonebooth{
         border-radius: 2em 0 0 2em;
@@ -197,5 +209,12 @@ footer > p {
     }
     form {
         margin: 3em 0 0;
+    }
+
+    .warning {
+        margin-top: .8em;
+        display: inline-block;
+        /* position: absolute; */
+        
     }
 }
