@@ -184,12 +184,12 @@ footer > p {
     .second{
         padding: 1em;
         margin: auto auto;
-            border-radius: 0 2em 2em 0;
+        border-radius: 0 2em 2em 0;
     }
     .container {
-        width: 100%;
+        /* width: 70%; */
+        /* max-width: 800px; */
         min-height: 100vh;
-        flex-direction: row;
     }
     .phonebooth{
         border-radius: 2em 0 0 2em;
