@@ -28,10 +28,11 @@ img {
 
 input{
     width: 100%;
-    padding: .5em;
+    padding: .6em;
     font-family: inherit;
     border-radius: .5em;
     border: 0;
+    font-size: .8rem;
 }
 
 
@@ -43,8 +44,7 @@ input{
 
 .second{
     flex-basis: 60%;
-    /* background: #618DF8; */
-    background: rgba(62, 160, 254, .8);
+    background: rgba(97,141,248, .7);
     flex-direction: column;
     justify-content: center;
     border-radius: 0 0 2em 2em;
@@ -119,7 +119,6 @@ form{
 
 .flex-container {
     flex-direction: column;
-    /* border: 1px solid magenta; */
     border-radius: 2em;
     width: 60%;
     min-width: 200px;
@@ -132,7 +131,7 @@ form{
 
 .container {
     width: 100%;
-    min-height: 80vh;
+    min-height: 70vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -169,8 +168,7 @@ footer {
     .flex-container{
         flex-direction: row;
         max-width: 900px;
-        height: 400px;
-        /* width: 80%; */
+        height: 350px;
     }
     .logo {
         width: 200px;
@@ -180,15 +178,12 @@ footer {
     }
     .second{
         padding: 1em;
-        /* margin: auto auto; */
         border-radius: 0 2em 2em 0;
         height: 100%;
         flex-basis: 80%;
     }
     .container {
-        /* width: 70%; */
-        /* max-width: 800px; */
-        min-height: 80vh;
+        min-height: 75vh;
     }
     .phonebooth{
         border-radius: 2em 0 0 2em;
@@ -214,6 +209,9 @@ footer {
     }
     form {
         margin: 3em 0 0;
+    }
+    input{
+        font-size: 1rem;
     }
 
     .warning {

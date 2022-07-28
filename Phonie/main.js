@@ -22,18 +22,36 @@ thePhoneNumber.addEventListener('input', (e) => {
     }
 })
 
+function validateNetwork(num) {
+    if (num.startsWith('+') && num.length < 7) {
+        clear()
+    }
+    if (num.length < 4) {
+        clear()
+    }
+    if (unknownNetwork(num) == true) {
+        testMaxDigits(num);
+        warning.textContent = "Unknown network";
+    }
+    else {
+        addGlow(num);
+        testMaxDigits(num);
+    }
+}
+
 
 
 function firstFourDigits(number) {
-    if (number.length >= 0 && number.length <= 4) {
-        if (number == '' || number.length != 4) {
-            number = '0'
+    if (countryCode(number) === false) {
+        if (number.length >= 0 && number.length <= 4) {
+            let digits = new RegExp('^' + number.substr(0, number.length)).exec(number);
+            return digits[0]
+        } else {
+            let digits = /^\d{4}/.exec(number);
+            return digits[0]
         }
-        let digits = new RegExp('^' + number.substr(0, number.length)).exec(number);
-        return digits[0]
-    } else {
-        let digits = /^\d{4}/.exec(number);
-        return digits[0]
+    }else{
+        return countryCode(number)
     }
 }
 
@@ -47,42 +65,72 @@ function extractFromMap(num){
 }
 
 function unknownNetwork(num) {
+    if(num.startsWith('+')){
+        if (num.length >= 7 && extractFromMap(num) === false) {
+            return true
+        }
+        return false
+    }
     if (num.length >= 4 && extractFromMap(num) === false){
         return true
     }
 }
 
-function testElevenDigits(num){
-    if (num.length > 11) {
+function testMaxDigits(num){
+    if (num.startsWith('+2340') && num.length > 15) {
         clear()
-        return warning.textContent = "Your number already exceeds 11 digits" 
+        return warning.textContent = "Invalid number"
+    } 
+    if (!num.startsWith('+2340') && num.length > 14){
+        clear()
+        return warning.textContent = "Invalid number"
+    } else if (num.length > 11 && !num.startsWith('+')) {
+        clear()
+        return warning.textContent = "Your number already exceeds 11 digits"
     }
     else {
         return warning.textContent = ""
     }
 }
 
+
 function addGlow(num){
-    if (num.length >= 4){
+    if (num.startsWith('+') && num.length >= 7) {
+        extractFromMap(num).classList.add('glow')
+    }
+    if (num.length >= 4 && !num.startsWith('+')){
         extractFromMap(num).classList.add('glow')
     }
 }
 
 
-function validateNetwork(num) {
-    if(num.length < 4){
-        clear()   
-    }
-    if (unknownNetwork(num)){
-        testElevenDigits(num)
-        warning.textContent = "Unknown network"
-    }else {
-        addGlow(num)
-        testElevenDigits(num)
-    } 
-}
+
 
 function clear() {
-    all.forEach(e => e.classList.remove('glow'))
+    all.forEach(e => e.classList.remove('glow'));
 }
 
+function countryCode(num) {
+    let code = '+234';
+    if (num.startsWith('+')){
+        if (num.length > 0 && num.length < 7) {
+            let digits = new RegExp("\\" + num.substr(0, num.length)).exec(num);
+            return digits[0].slice(0, num.length)
+        }
+        if (num.length >= 7) {
+            let digits = new RegExp("\\" + num.substr(0, num.length)).exec(num);
+            let requiredDigits = digits[0].slice(code.length, 7);
+            if (requiredDigits.startsWith('0')) {
+                if (num.length === 7){
+                    return
+                }
+                if (num.length >= 8) {
+                    return digits[0].slice(code.length, 8)
+                }
+            } else if (!requiredDigits.startsWith('0')) {
+                return '0' + requiredDigits
+            }
+        }
+    }
+    return false
+}
